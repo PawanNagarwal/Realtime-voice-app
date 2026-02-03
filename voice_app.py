@@ -7,7 +7,6 @@ from streamlit_mic_recorder import mic_recorder
 import io
 import os
 
-os.environ['OPENAI_API_KEY'] = os.getenv('OPENAI_API_KEY')
 
 # Initialize OpenAI client
 client = OpenAI()
@@ -306,3 +305,4 @@ with st.sidebar:
     st.markdown("**Stats:**")
     st.metric("Total Topics", len(st.session_state.tree_nodes))
     st.metric("Total Recordings", len(st.session_state.conversation_history))
+
